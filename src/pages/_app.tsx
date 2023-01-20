@@ -1,12 +1,18 @@
-import '../global/styles';
 import type { AppProps } from 'next/app';
-import { GlobalStyle } from '../global/styles';
+import { GlobalStyle } from '../global/styles/index';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { useState } from 'react';
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
+  const [queryClient] = useState(() => new QueryClient());
   return (
     <>
-      <GlobalStyle />
-      <Component {...pageProps} />
+      <QueryClientProvider client={queryClient}>
+        <GlobalStyle />
+        <Component {...pageProps} />;
+      </QueryClientProvider>
     </>
   );
 }
+
+export default MyApp;
