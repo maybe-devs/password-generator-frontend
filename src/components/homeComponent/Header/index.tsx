@@ -2,31 +2,33 @@ import * as S from './styles';
 import { AiFillExclamationCircle } from 'react-icons/ai';
 import InputSlider from './InputSlider';
 import { usePostPassword } from '../../../global/services/POST/usePostPassword';
+import { ChangeEvent, useContext } from 'react';
+import { PasswordDetailsContext } from '@/global/context';
 
+type IPasswordInfo = {
+  hasNumbers: boolean;
+  hasSymbols: boolean;
+  length: number;
+  lowerCase: boolean;
+  upperCase: boolean;
+};
 export const Header = () => {
   const { postPassword, isSuccessPostPassword } = usePostPassword();
-  // hasNumbers: true,
-  // hasSymbols: true,
-  // length: 32,
-  // lowerCase: true,
-  // upperCase: true,
-  console.log(postPassword);
 
-  const handleSuccessPost = () => {
-    console.log('post aqui');
+  const { passwordInfo, setPasswordInfo } = useContext(PasswordDetailsContext);
+
+  const handleCheckboxState = (
+    e: ChangeEvent<HTMLInputElement>,
+    currentKey: keyof typeof passwordInfo,
+  ) => {
+    let isChecked = e.target.checked;
+    setPasswordInfo((prev) => ({ ...prev, [currentKey]: isChecked }));
   };
 
   return (
     <S.Container>
       <S.TitleContainer>
         <S.Title>Customize your password</S.Title>
-        <button
-          onClick={() => {
-            postPassword;
-          }}
-        >
-          aaa
-        </button>
       </S.TitleContainer>
 
       <S.PasswordInformations>
@@ -60,15 +62,24 @@ export const Header = () => {
         </div>
         <div className="checkboxGroupOne">
           <article>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onChange={(e) => handleCheckboxState(e, 'upperCase')}
+            />
             <span>UpperCase</span>
           </article>
           <article>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onChange={(e) => handleCheckboxState(e, 'lowerCase')}
+            />
             <span>LowCase</span>
           </article>
           <article>
-            <input type="checkbox" />
+            <input
+              type="checkbox"
+              onChange={(e) => handleCheckboxState(e, 'hasNumbers')}
+            />
             <span>Number</span>
           </article>
         </div>
