@@ -1,17 +1,17 @@
-# Documentação inicial do frontend
+# Initial Documentation - Front-end
 
-- Setup nextsjs
-  - Utilizando a blibioteca do nextjs conseguimos iniciar um template
+- Setup next-js
+  - Utilizando a bibliteca do nextjs conseguimos iniciar um template:
     `$ npx create-next-app`
-  - Configuração do [styled components](https://styled-components.com/docs/basics)
+  - Configuration of [styled components](https://styled-components.com/docs/basics)
   - Criação de componentes globais e paginas
-    - Pagina - Home
-    - Componente - Home
-      - Tittle
+    - Page - Home
+    - Components - Home
+      - Title
       - Header(Output password)
         - password view
         - copy and refresh
       - Main(Customize our hash)
-        - main tittle
+        - main title
         - password length(slide)
         - checkbox (uppercase or lowercase)
