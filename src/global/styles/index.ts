@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
+  overflow: hiden;
 }
 
 html{
