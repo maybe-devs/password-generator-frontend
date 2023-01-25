@@ -20,6 +20,15 @@ interface IContext {
   setPasswordInfo: Dispatch<SetStateAction<IPasswordInfo>>;
 }
 
+interface PasswordContext {
+  passwordView: IPasswordView;
+  setPasswordView: Dispatch<SetStateAction<IPasswordView>>;
+}
+
+interface IPasswordView {
+  password: string;
+}
+
 interface IProvider {
   children: ReactNode;
 }
@@ -29,7 +38,7 @@ export const PasswordDetailsProvider: FC<IProvider> = ({ children }) => {
   const [passwordInfo, setPasswordInfo] = useState<IPasswordInfo>({
     hasNumbers: false,
     hasSymbols: false,
-    length: 0,
+    length: 10,
     lowerCase: false,
     upperCase: false,
   });
@@ -38,5 +47,19 @@ export const PasswordDetailsProvider: FC<IProvider> = ({ children }) => {
     <PasswordDetailsContext.Provider value={{ passwordInfo, setPasswordInfo }}>
       {children}
     </PasswordDetailsContext.Provider>
+  );
+};
+
+export const PasswordViewContext = createContext<PasswordContext>(null!);
+
+export const PasswordViewDetails: FC<IProvider> = ({ children }) => {
+  const [passwordView, setPasswordView] = useState<IPasswordView>({
+    password: 'string',
+  });
+
+  return (
+    <PasswordViewContext.Provider value={{ passwordView, setPasswordView }}>
+      {children}
+    </PasswordViewContext.Provider>
   );
 };

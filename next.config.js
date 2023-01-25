@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    PASSWORD_URL: process.env.PASSWORD_URL,
+    PASSWORD_API: process.env.PASSWORD_API,
   },
 };
 

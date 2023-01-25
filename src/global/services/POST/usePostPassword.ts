@@ -11,11 +11,11 @@ interface PasswordTypes {
 }
 
 const postPassword = async (body: PasswordTypes) => {
+  console.log('thats the body', body);
+
   try {
-    await API.post(`/api/generate/password`, {
-      // postPassword:
-      body,
-    });
+    const password = await API.post(`/api/generate/password`, body);
+    return password.data.password;
   } catch (err) {
     if (err instanceof AxiosError) throw new Error(err?.response?.data);
     throw new Error('Internal server error', err as ErrorOptions | undefined);
@@ -25,8 +25,7 @@ const postPassword = async (body: PasswordTypes) => {
 export const usePostPassword = () => {
   const { mutateAsync, isSuccess } = useMutation(
     async (dataPost: PasswordTypes) => {
-      await postPassword(dataPost),
-        { onSuccess: () => console.log('Deu certo!') };
+      return await postPassword(dataPost);
     },
   );
 

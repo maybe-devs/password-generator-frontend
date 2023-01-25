@@ -5,6 +5,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
 import MuiInput from '@mui/material/Input';
+import { PasswordDetailsContext } from '@/global/context';
+import { ChangeEvent, useContext } from 'react';
 // import VolumeUp from '@mui/icons-material/VolumeUp';
 
 const Input = styled(MuiInput)`
@@ -17,23 +19,21 @@ const Input = styled(MuiInput)`
 `;
 
 export default function InputSlider() {
-  const [value, setValue] = React.useState<
-    number | string | Array<number | string>
-  >(30);
-
+  const { passwordInfo, setPasswordInfo } = useContext(PasswordDetailsContext);
   const handleSliderChange = (event: Event, newValue: number | number[]) => {
-    setValue(newValue);
+    setPasswordInfo((prev) => ({ ...prev, length: Number(newValue) }));
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value === '' ? '' : Number(event.target.value));
+    let tmpLength = event.target.value === '' ? '' : Number(event.target.value);
+    setPasswordInfo((prev) => ({ ...prev, length: Number(tmpLength) }));
   };
 
   const handleBlur = () => {
-    if (value < 0) {
-      setValue(0);
-    } else if (value > 100) {
-      setValue(100);
+    if (passwordInfo.length < 10) {
+      setPasswordInfo((prev) => ({ ...prev, length: 10 }));
+    } else if (passwordInfo.length > 100) {
+      setPasswordInfo((prev) => ({ ...prev, length: 100 }));
     }
   };
 
@@ -42,13 +42,13 @@ export default function InputSlider() {
       <Grid container spacing={2} alignItems="center">
         <Grid item>
           <Input
-            value={value}
+            value={passwordInfo.length}
             size="small"
             onChange={handleInputChange}
             onBlur={handleBlur}
             inputProps={{
               step: 10,
-              min: 0,
+              min: 10,
               max: 100,
               type: 'number',
               'aria-labelledby': 'input-slider',
@@ -57,7 +57,9 @@ export default function InputSlider() {
         </Grid>
         <Grid item xs>
           <Slider
-            value={typeof value === 'number' ? value : 0}
+            value={
+              typeof passwordInfo.length === 'number' ? passwordInfo.length : 10
+            }
             onChange={handleSliderChange}
             aria-labelledby="input-slider"
           />

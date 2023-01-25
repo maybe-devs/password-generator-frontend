@@ -3,10 +3,10 @@ import styled from 'styled-components';
 export const Container = styled.div`
   border-radius: 2px;
   width: 700px;
-  height: 3rem;
+  height: 4rem;
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem 0 6rem;
+  padding-left: 1rem;
   border-bottom: 1px solid grey;
   align-items: center;
   margin: 0auto;
@@ -17,10 +17,14 @@ export const Container = styled.div`
     rgba(178, 220, 228, 1) 0%,
     rgba(230, 185, 255, 1) 86%
   );
-  margin-bottom: 0.8rem;
-
-  p {
+  margin-bottom: 0.8rem p {
+    justify-content: center;
+    display: flex;
     font-weight: 600;
+    max-width: 600px;
+    width: 100%;
+    height: 50px;
+    word-break: break-all;
   }
 
   div {
@@ -37,5 +41,16 @@ export const Container = styled.div`
       opacity: 0.5;
       cursor: pointer;
     }
+  }
+
+  p {
+    width: 600px;
+    height: 50px;
+    word-break: break-all;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
   }
 `;
