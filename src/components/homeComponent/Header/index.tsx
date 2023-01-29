@@ -30,7 +30,6 @@ export const Header = () => {
       <S.TitleContainer>
         <S.Title>Customize your password</S.Title>
       </S.TitleContainer>
-
       <S.PasswordInformations>
         <div className="passwordLenght">
           <p>Password Length</p>
@@ -39,25 +38,19 @@ export const Header = () => {
         <div className="checkboxGroupOne">
           <article>
             <label>
-              <input type="checkbox" />
-            </label>
-
-            <span>Easy to say</span>
-            <AiFillExclamationCircle className="checkIcon" />
-          </article>
-          <article>
-            <label>
-              <input type="checkbox" />
-            </label>
-            <span>Easy to read</span>
-            <AiFillExclamationCircle className="checkIcon" />
-          </article>
-          <article>
-            <label>
-              <input type="checkbox" />
+              <input
+                type="checkbox"
+                onChange={(e) => handleCheckboxState(e, 'hasSymbols')}
+              />
             </label>
             <span>All characters</span>
-            <AiFillExclamationCircle className="checkIcon" />
+          </article>
+          <article>
+            <input
+              type="checkbox"
+              onChange={(e) => handleCheckboxState(e, 'hasNumbers')}
+            />
+            <span>Number</span>
           </article>
         </div>
         <div className="checkboxGroupOne">
@@ -74,13 +67,6 @@ export const Header = () => {
               onChange={(e) => handleCheckboxState(e, 'lowerCase')}
             />
             <span>LowCase</span>
-          </article>
-          <article>
-            <input
-              type="checkbox"
-              onChange={(e) => handleCheckboxState(e, 'hasNumbers')}
-            />
-            <span>Number</span>
           </article>
         </div>
       </S.PasswordInformations>
