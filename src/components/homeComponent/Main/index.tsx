@@ -1,12 +1,9 @@
 import * as S from './styles';
-import { MdOutlineContentCopy } from 'react-icons/md';
 import { TfiReload } from 'react-icons/tfi';
 import { usePostPassword } from '@/global/services/POST/usePostPassword';
 import { useContext, useRef, useState } from 'react';
 import { PasswordDetailsContext, PasswordViewDetails } from '@/global/context';
-import copy from 'copy-to-clipboard';
 import { BsClipboard } from 'react-icons/bs';
-import TextBubble from '../../../assets/text-bubble.png';
 
 export const Main = () => {
   const { postPassword, isSuccessPostPassword } = usePostPassword();
