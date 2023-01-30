@@ -22,7 +22,7 @@ export const Title = styled.h3`
   align-items: center;
   text-align: center;
   position: absolute;
-  top: 2rem;
+  top: 2.5rem;
   color: #fff;
 `;
 
