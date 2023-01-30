@@ -9,7 +9,7 @@ export const LoginModal = () => {
         <span>Email:</span>
         <input type="text" placeholder="digite seu email:" alt="email" />
         <span>Senha:</span>
-        <input type="text" placeholder="digite sua senha:" alt="senha" />
+        <input type="text" placeholder="digite sua senha" alt="senha" />
       </S.Informations>
       <S.ButtonContainer>
         <button className="signIn">Sign in</button>
