@@ -1,7 +1,8 @@
-import { LoginComponent } from '@/components/loginComponent';
+import { HomeComponent } from '@/components/homeComponent';
+import { NextPage } from 'next';
 import Head from 'next/head';
 
-export default function Login() {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -14,8 +15,10 @@ export default function Login() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <LoginComponent />
+        <HomeComponent />
       </div>
     </>
   );
-}
+};
+
+export default Home;
