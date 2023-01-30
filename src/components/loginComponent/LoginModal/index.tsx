@@ -1,5 +1,4 @@
 import * as S from './styles';
-import Box from '@mui/material/Box';
 import Link from 'next/link';
 
 export const LoginModal = () => {
