@@ -3,18 +3,24 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 400px;
   width: 100%;
-  height: 500px;
+  height: 450px;
   display: flex;
   justify-content: center;
   position: relative;
   margin: 0 auto;
-  background-color: #282442;
   border-radius: 5px;
   flex-direction: column;
   margin: 1rem;
+  z-index: 999;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background: #282442;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15.5px);
+  -webkit-backdrop-filter: blur(15.5px);
 `;
 
-export const Title = styled.h3`
+export const SubTitle = styled.h3`
   width: 100%;
   height: 3rem;
   display: flex;
@@ -24,6 +30,8 @@ export const Title = styled.h3`
   position: absolute;
   top: 2.5rem;
   color: #fff;
+  letter-spacing: 4px;
+  font-size: 1.5rem;
 `;
 
 export const Informations = styled.div`
@@ -42,7 +50,8 @@ export const Informations = styled.div`
     max-width: 350px;
     width: 100%;
     text-align: left;
-    font-weight: 600;
+    /* font-weight: 600; */
+    letter-spacing: 2px;
     color: #fff;
   }
 
@@ -60,31 +69,67 @@ export const ButtonContainer = styled.div`
   position: absolute;
   bottom: 0rem;
   width: 100%;
-  height: 7rem;
+  height: 8rem;
   display: flex;
-  justify-content: center;
+
   align-items: center;
   bottom: 2rem;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column-reverse;
   a {
+    font-size: 12px;
     color: #fff;
     border-bottom: 1px solid #fff;
   }
+`;
 
-  button {
-    height: 2rem;
-    max-width: 5rem;
-    width: 100%;
-    border: none;
-    border-radius: 5px;
-    background-color: grey;
-    font-weight: 600;
-    color: #fff;
-    margin: 0.5rem 0 0.5rem 0;
+export const Button = styled.div`
+  body {
+    background-color: #151320;
   }
-
-  .signIn {
-    background-color: #000000;
+  div {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 7rem;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #1c1b29;
+  }
+  div:before {
+    content: '';
+    background-image: conic-gradient(#04b0ee 20deg, transparent 160deg);
+    height: 140%;
+    width: 140%;
+    position: absolute;
+    left: -20%;
+    top: -20%;
+    animation: rotate 1.5s infinite linear;
+  }
+  @keyframes rotate {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  div:after {
+    content: 'SIGN IN';
+    height: 94%;
+    width: 94%;
+    position: absolute;
+    background-color: #1c1b29;
+    border-radius: 5px;
+    top: 3%;
+    left: 3%;
+    color: #04b0ee;
+    display: grid;
+    place-items: center;
+    font-size: 10px;
+    letter-spacing: 6px;
   }
 `;
