@@ -14,16 +14,10 @@ export const Container = styled.div`
   z-index: 999;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
-  /* background: #282442;
+  background: #282442;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(15.5px);
-  -webkit-backdrop-filter: blur(15.5px); */
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  -webkit-backdrop-filter: blur(15.5px);
 `;
 
 export const SubTitle = styled.p`
@@ -90,6 +84,9 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Button = styled.div`
+  body {
+    background-color: #151320;
+  }
   div {
     cursor: pointer;
     height: 2.5rem;
