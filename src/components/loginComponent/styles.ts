@@ -12,19 +12,18 @@ export const Container = styled.div`
   height: 100vh;
 
   /* background-color: #000000; */
-  /* background: */
-  /* url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) */
-  /* center / cover no-repeat fixed #131122; */
+  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center;
+  //cover no-repeat fixed #131122;
 
   //
 
-  background: rgb(10, 9, 19);
+  /* background: rgb(10, 9, 19);
   background: linear-gradient(
     0deg,
     rgba(10, 9, 19, 1) 0%,
     rgba(13, 18, 32, 1) 50%,
     rgba(15, 26, 45, 1) 100%
-  );
+  ); */
 
   display: flex;
   justify-content: center;
