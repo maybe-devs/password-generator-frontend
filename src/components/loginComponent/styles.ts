@@ -12,9 +12,10 @@ export const Container = styled.div`
   height: 100vh;
 
   /* background-color: #000000; */
-  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center;
-  //cover no-repeat fixed #131122;
-
+  background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center
+    no-repeat;
+  // no-repeat fixed;
+  background-size: cover;
   //
 
   /* background: rgb(10, 9, 19);

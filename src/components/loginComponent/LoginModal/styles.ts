@@ -61,7 +61,7 @@ export const Informations = styled.div`
     color: #fff;
   }
 
-  input {
+  .email {
     max-width: 350px;
     width: 100%;
     padding: 0.5rem;
