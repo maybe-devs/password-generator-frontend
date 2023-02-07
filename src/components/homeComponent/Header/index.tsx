@@ -1,20 +1,9 @@
 import * as S from './styles';
-import { AiFillExclamationCircle } from 'react-icons/ai';
 import InputSlider from './InputSlider';
-import { usePostPassword } from '../../../global/services/POST/usePostPassword';
 import { ChangeEvent, useContext } from 'react';
 import { PasswordDetailsContext } from '@/global/context';
 
-type IPasswordInfo = {
-  hasNumbers: boolean;
-  hasSymbols: boolean;
-  length: number;
-  lowerCase: boolean;
-  upperCase: boolean;
-};
 export const Header = () => {
-  const { postPassword, isSuccessPostPassword } = usePostPassword();
-
   const { passwordInfo, setPasswordInfo } = useContext(PasswordDetailsContext);
 
   const handleCheckboxState = (
