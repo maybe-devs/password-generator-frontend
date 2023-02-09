@@ -19,8 +19,8 @@ export const Header = () => {
       <S.TitleContainer>
         <S.Title>Customize your password</S.Title>
       </S.TitleContainer>
-      <S.PasswordInformations>
-        <div className="passwordLenght">
+      <S.PasswordInformation>
+        <div className="passwordLength">
           <p>Password Length</p>
           <InputSlider />
         </div>
@@ -58,7 +58,7 @@ export const Header = () => {
             <span>LowCase</span>
           </article>
         </div>
-      </S.PasswordInformations>
+      </S.PasswordInformation>
     </S.Container>
   );
 };

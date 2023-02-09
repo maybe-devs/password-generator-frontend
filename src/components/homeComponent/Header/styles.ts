@@ -34,7 +34,7 @@ export const Title = styled.h3`
   }
 `;
 
-export const PasswordInformations = styled.div`
+export const PasswordInformation = styled.div`
   display: flex;
   @media (max-width: 810px) {
     flex-direction: column;
@@ -44,7 +44,7 @@ export const PasswordInformations = styled.div`
     padding: 0.5rem;
     font-weight: 500;
   }
-  .passwordLenght {
+  .passwordLength {
     max-width: 300px;
     width: 100%;
     height: 100px;

@@ -1,8 +1,7 @@
 import { HomeComponent } from '@/components/homeComponent';
-import { NextPage } from 'next';
 import Head from 'next/head';
 
-const Home: NextPage = () => {
+export default function Home() {
   return (
     <>
       <Head>
@@ -19,6 +18,4 @@ const Home: NextPage = () => {
       </div>
     </>
   );
-};
-
-export default Home;
+}
