@@ -9,14 +9,12 @@ export const Main = () => {
   const { postPassword, isSuccessPostPassword } = usePostPassword();
 
   const { passwordInfo, setPasswordInfo } = useContext(PasswordDetailsContext);
-  console.log(passwordInfo);
   const [passwordView, setPasswordView] = useState('');
   const sendInfo = async () => {
     const password = await postPassword(passwordInfo);
     setPasswordView(password);
     setTextClipBoard(false);
   };
-  console.log(passwordView, 'aa');
   const [textClipBoard, setTextClipBoard] = useState(false);
   const keyLink = useRef<HTMLInputElement>(null);
 

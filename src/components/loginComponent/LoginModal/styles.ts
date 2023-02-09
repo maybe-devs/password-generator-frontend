@@ -14,10 +14,6 @@ export const Container = styled.div`
   z-index: 999;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 20px;
-  /* background: #282442;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(15.5px);
-  -webkit-backdrop-filter: blur(15.5px); */
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
@@ -40,7 +36,7 @@ export const SubTitle = styled.p`
   font-size: 1.5rem;
 `;
 
-export const Informations = styled.div`
+export const Information = styled.div`
   width: 100%;
   height: 10rem;
   display: flex;
@@ -56,7 +52,6 @@ export const Informations = styled.div`
     max-width: 350px;
     width: 100%;
     text-align: left;
-    /* font-weight: 600; */
     letter-spacing: 2px;
     color: #fff;
   }

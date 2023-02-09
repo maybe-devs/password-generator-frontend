@@ -50,7 +50,6 @@ export const Informations = styled.div`
     max-width: 350px;
     width: 100%;
     text-align: left;
-    /* font-weight: 600; */
     letter-spacing: 2px;
     color: #fff;
   }

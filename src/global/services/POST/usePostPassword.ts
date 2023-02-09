@@ -11,8 +11,6 @@ interface PasswordTypes {
 }
 
 const postPassword = async (body: PasswordTypes) => {
-  console.log('thats the body', body);
-
   try {
     const password = await API.post(`/api/generate/password`, body);
     return password.data.password;

@@ -6,7 +6,7 @@ export const LoginModal = () => {
   return (
     <S.Container>
       <S.SubTitle>LOGIN</S.SubTitle>
-      <S.Informations>
+      <S.Information>
         <span>Email:</span>
         <input
           className="email"
@@ -15,9 +15,8 @@ export const LoginModal = () => {
           alt="email"
         />
         <span>Senha:</span>
-        {/* <input type="text" placeholder="digite sua senha:" alt="senha" /> */}
         <ShowAndHidePassword />
-      </S.Informations>
+      </S.Information>
       <S.ButtonContainer>
         <Link href="/registration">Sign Up</Link>
         <S.Button>

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  /* background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230)); */
   max-width: 700px;
   width: 100%;
   height: 50px;
