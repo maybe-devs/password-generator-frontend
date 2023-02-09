@@ -13,7 +13,7 @@
     - Page
       - Login
         - Title
-        - Modal (email and passoword)
+        - Modal (Email and Passoword)
         <br />
         
         <div align='center'>
