@@ -14,7 +14,7 @@
       - Login
         - Title
         - Modal (email and passoword)
-        </br />
+        <br />
         
         <div align='center'>
           <img src="./src/assets/login-project.png" alt='project image' width='600'  />
