@@ -13,7 +13,12 @@
     - Page
       - Login
         - Title
-        - Modal
+        - Modal (Email and Password)
+        <br />
+        
+        <div align='center'>
+          <img src="./src/assets/login-project.png" alt='project image' width='600'  />
+        <div/>
 
   - Criação de componentes globais e paginas
     - Page
@@ -26,9 +31,7 @@
         - copy and refresh
         - Main(Customize our hash)
         - main title
-        - password length(slide)
-        - checkbox (uppercase or lowercase)
+        - password length(Slide)
+        - checkbox (Uppercase or Lowercase)
 
-<div align='center'>
-<img src="./src/assets/login-project.png" alt='project image' width='600'  />
-<div/>
+
